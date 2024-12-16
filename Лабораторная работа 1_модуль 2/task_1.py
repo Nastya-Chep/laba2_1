@@ -2,8 +2,9 @@
 import doctest
 
 class Book:
-    """
-     Создание объекта "Книга"
+    def __init__(self, name: str, count_pages: int, pages_now: int):
+        """
+        Создание объекта "Книга"
 
         :param name: Название книги
         :param count_pages: Общее количество страниц
@@ -11,8 +12,7 @@ class Book:
 
         Пример:
         >>> book1 = Book("Война и мир", 500, 30)
-    """
-    def __init__(self, name: str, count_pages: int, pages_now: int):
+        """
         if not isinstance(name, str):
             raise TypeError("Не соответствует тип данных")
         self.name = name
@@ -68,16 +68,16 @@ class Book:
 
 
 class Table:
-    """
-     Создание объекта "Стол"
+    def __init__(self, width: int, length: int):
+        """
+        Создание объекта "Стол"
 
         :param width: Ширина стола
         :param length: Длина стола
 
         Пример:
         >>> table1 = Table(60, 90)
-    """
-    def __init__(self, width: int, length: int):
+        """
         if not isinstance(width, int):
             raise TypeError("Не соответствует тип данных")
         if width <= 0:
@@ -116,8 +116,10 @@ class Table:
 
 
 class SchoolJournal:
-    """
-     Создание объекта "Школьный журнал"
+
+    def __init__(self, subject: str, number_of_five: int, number_of_two: int):
+        """
+        Создание объекта "Школьный журнал"
 
         :param subject: Школьный предмет
         :param number_of_five: Количество пятёрок
@@ -125,9 +127,7 @@ class SchoolJournal:
 
         Пример:
         >>> journal = SchoolJournal("Математика", 10, 3)
-    """
-
-    def __init__(self, subject: str, number_of_five: int, number_of_two: int):
+        """
         if not isinstance(subject, str):
             raise TypeError("Не соответствует тип данных")
         self.subject = subject
